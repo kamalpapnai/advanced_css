@@ -13,16 +13,26 @@
         height: 7rem;
         width:7rem;
         position: fixed;
-        top:6rem;
-        right:6rem;
+        top:6.5rem;
+        right:6.5rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black,.1);
         text-align: center;
         cursor: pointer;
-      
 
+        @include respond(tab-port){
+            top:4.5rem;
+            right:4.5rem;
+        }
 
+        @include respond(phone){
+            top:3rem;
+            right:3rem;
+        }
+         
+         
+    
     }
 
     &__background{
@@ -37,6 +47,17 @@
 
         transition:transform .8s cubic-bezier(0.86,0,0.07,1);
 
+        @include respond(tab-port){
+            top:4.5rem;
+            right:4.5rem;
+        }
+
+        @include respond(phone){
+            top:3.5rem;
+            right:3.5rem;
+        }
+         
+         
        
 
     }
@@ -79,8 +100,6 @@
     &__item{
          margin: .5rem;
          
-         
-
     }
 
     &__link{
@@ -88,7 +107,7 @@
         &:link,
         &:visited{
             text-decoration: none;
-     display: inline-block;
+       display: block;
       font-size: 3rem;
       font-weight: 100;
       color: $color-white;
@@ -98,6 +117,10 @@
       background-size: 220%;
       transition: all .4s;
       padding: 1rem 2rem;
+
+      @include respond(phone){
+          font-size: 2rem;
+      }
 
         }
 
